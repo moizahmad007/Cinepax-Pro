@@ -1,0 +1,2122 @@
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Joan', serif;
+}
+
+a {
+    text-decoration: none;
+    color: #adadad;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem 1rem;
+    background-color: #cd8c38;
+    border-radius: 2rem;
+    color: #1e1f26;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: #92601f;
+}
+
+.btn-l {
+    width: 100%;
+    text-align: center;
+}
+
+body {
+    background-color: #1e1f26;
+    display: grid;
+    grid-template-columns: 1000px;
+    justify-content: space-evenly;
+}
+    body::-webkit-scrollbar {
+      height: 8px; /* Set height of the scrollbar */
+    }
+    
+    body::-webkit-scrollbar-thumb {
+      background-color: #cd8c38; /* Set color of the scrollbar thumb */
+      border-radius: 4px;
+    }
+    
+    body.movie-list::-webkit-scrollbar-track {
+      background: #f1f1f1; /* Set background color of the scrollbar track */
+    }
+
+
+
+                                  /* below the Style/CSS of TopBar */
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+}
+
+.left-content,
+.right-content {
+    display: flex;
+    align-items: center;
+}
+.help{
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.help:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds a shadow */
+  border: 2px solid #cd8c38; /* Adds a border */
+}
+
+/* Hover effect for .menu */
+.menu:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds a shadow */
+  border: 2px solid #cd8c38; /* Adds a border */
+}
+
+/* Hover effect for .notification */
+.notification:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds a shadow */
+    border: 2px solid #cd8c38; /* Adds a border */
+  }
+
+                               /*The CSS of Basic layout for the menu */
+.menu-container {
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.menu-toggle {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background-color: #45a049;
+}
+
+.title {
+    margin-right: 3rem;
+    color: #cd8c38;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+}
+
+.navigation li {
+    margin-right: 1rem;
+}
+
+.navigation li a:hover {
+    color: #cd8c38;
+}
+
+.active {
+    color: #cd8c38;
+}
+
+.notification,
+.help,
+.menu {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.notification,
+.help {
+    margin-right: 1rem;
+}
+
+.menu {
+    margin-left: .8rem;
+}
+
+.profile-img-box {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+                                 /*The CSS of Ticket Page Styles */
+.ticket-page {
+  position: fixed;
+  top: 5%;
+  left: 22%;
+  width: 56%;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #cd8c38;
+  color: #adadad;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+}
+
+.ticket-page .left-content h2 {
+margin-bottom: 15px;
+font-size: 26px;
+color: #cd8c38; /* Darker text for better contrast */
+}
+
+.ticket-page .left-content ul li a{
+cursor: pointer;
+font-size: 16px;
+color: #cd8c38;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.ticket-page .left-content ul li a:hover{
+color: #92601f;
+}
+.ticket-page .content {
+margin-top: 30px;
+padding: 30px;
+background:linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));;
+backdrop-filter: blur(5px);
+border: 1px solid #cd8c38;
+border-radius: 12px;
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+max-width: 900px;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+.booking-form,
+.booking-confirmation {
+color: #cd8c38;
+text-align: center;
+}
+
+.booking-form h1,
+.booking-confirmation h1 {
+margin-bottom: 20px;
+font-size: 28px;
+color: #cd8c38;
+}
+
+.booking-form label {
+display: block;
+margin-bottom: 12px;
+font-size: 18px;
+font-weight: 500;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border-radius: 8px;
+border: 1px solid #ccc;
+font-size: 16px;
+}
+
+.booking-form input[type="number"],
+.booking-form input[type="text"],
+.booking-form select {
+max-width: 340px;
+margin: 10px auto;
+}
+
+.booking-form button {
+background-color: #cd8c38;
+color: white;
+border: none;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+background-color: #92601f;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+outline: none;
+border-color: #cd8c38;
+}
+
+.booking-confirmation p {
+font-size: 18px;
+color: #adadad;
+}
+
+.booking-confirmation h1 {
+color: #cd8c38; /* A successful  tone for confirmation */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.ticket-page .content {
+  padding: 20px;
+  margin: 20px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+  max-width: 100%;
+}
+
+.booking-form h1 {
+  font-size: 24px;
+}
+
+.booking-form label {
+  font-size: 16px;
+}
+}
+
+                              /*The CSS of Movie Timings Page */
+.movies-page {
+position: fixed;
+top: 5%;
+left: 22%;
+width: 56%;
+height: 90%;
+background: rgba(0, 0, 0, 0.7);
+border: 1px solid #cd8c38;
+color: #adadad;
+display: flex;
+flex-direction: column;
+z-index: 1000;
+border-radius: 1rem;
+padding: 2rem 2.5rem;
+overflow-y: auto; /* Enable vertical scrolling */
+scrollbar-width: thin; /* Firefox scrollbar width */
+scrollbar-color: #cd8c38 rgba(0, 0, 0, 0.3); /* Scrollbar color */
+}
+
+/* Scrollbar styling for Webkit browsers (Chrome, Safari, Edge) */
+.movies-page::-webkit-scrollbar {
+width: 8px;
+}
+
+.movies-page::-webkit-scrollbar-thumb {
+background-color: #cd8c38;
+border-radius: 4px;
+}
+
+.movies-page::-webkit-scrollbar-track {
+background: rgba(0, 0, 0, 0.3);
+}
+
+.movies-page .left-content {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.movies-page .left-content h2 {
+margin-bottom: 10px;
+font-size: 28px;
+color: #cd8c38;
+}
+
+.movies-page .content {
+font-size: 30px;
+color: #cd8c38;
+text-align: center;
+margin-top: 30px;
+}
+
+.movies-page .movie-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.movies-page .movie-list li {
+background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));
+backdrop-filter: blur(5px);
+border: 1px solid #cd8c38;
+margin: 15px 0;
+padding: 20px;
+width: 90%;
+max-width: 600px;
+border-radius: 10px;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movies-page .movie-list li:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.movies-page .movie-list li h4 {
+margin: 0;
+font-size: 24px;
+color: #cd8c38;
+font-weight: bold;
+}
+
+.movies-page .movie-list li p {
+font-size: 18px;
+color: #adadad;
+margin-top: 5px;
+}
+
+.movies-page .navigation li a {
+cursor: pointer;
+font-size: 16px;
+color: #cd8c38;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.movies-page .navigation li a:hover {
+color: #92601f;
+}
+
+
+
+.movie-list {
+display: flex; /* Display items in a horizontal row */
+overflow-x: auto; /* Enable horizontal scrolling */
+padding: 10px 0;
+list-style: none; /* Remove default list styling */
+margin: 0;
+}
+
+.movie-list li {
+flex: 0 0 auto; /* Prevent items from shrinking or growing */
+width: 200px; /* Set fixed width for each item */
+margin-right: 20px; /* Space between items */
+background-color: #333; /* Background color for each movie item */
+color: white;
+padding: 10px;
+border-radius: 5px;
+text-align: center;
+}
+
+.movie-list li h4 {
+font-size: 18px;
+margin: 0;
+}
+
+.movie-list li p {
+font-size: 14px;
+margin: 5px 0;
+}
+.movie-list li p em{
+color: #cd8c38;
+}
+
+/* Searchbar*/
+.movies-page .search-bar {
+width: 50%;
+padding: 10px;
+margin-bottom: 20px;
+font-size: 16px;
+border: 1px solid #cd8c38;
+border-radius: 5px;
+background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));
+backdrop-filter: blur(5px);
+border: 1px solid #cd8c38;
+color: #adadad;
+}
+
+.movies-page .search-bar:focus {
+outline: none;
+border-color: #92601f;
+box-shadow: 0 0 5px rgba(205, 140, 56, 0.5);
+}
+
+/* Styling for Back Button */
+.movies-page .back-btn {
+display: inline-block;
+padding: 10px 20px;
+margin-top: 20px;
+background-color: #cd8c38;
+color: white;
+font-size: 16px;
+border-radius: 8px;
+text-decoration: none;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.movies-page .back-btn:hover {
+background-color: #92601f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.movies-page .left-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+.movies-page .movie-list li {
+  width: 95%;
+  margin: 10px 0;
+}
+
+.movies-page .movie-list li h4 {
+  font-size: 22px;
+}
+
+.movies-page .movie-list li p {
+  font-size: 16px;
+}
+
+.movies-page .navigation li a {
+  font-size: 14px;
+}
+
+.movies-page .back-btn {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+}
+
+                                     /*The CSS of Series Timings Page */ 
+.series-page {
+position: fixed;
+top: 5%;
+left: 22%;
+width: 56%;
+height: 90%;
+background: rgba(0, 0, 0, 0.7);
+border: 1px solid #cd8c38;
+color: #adadad;
+display: flex;
+flex-direction: column;
+z-index: 1000;
+border-radius: 1rem;
+padding: 2rem 2.5rem;
+overflow-y: auto; /* Enable vertical scrolling */
+scrollbar-width: thin; /* Firefox scrollbar width */
+scrollbar-color: #cd8c38 rgba(0, 0, 0, 0.3); /* Scrollbar color */
+}
+
+/* Scrollbar styling for Webkit browsers (Chrome, Safari, Edge) */
+.series-page::-webkit-scrollbar {
+width: 8px;
+}
+
+.series-page::-webkit-scrollbar-thumb {
+background-color: #cd8c38;
+border-radius: 4px;
+}
+
+.series-page::-webkit-scrollbar-track {
+background: rgba(0, 0, 0, 0.3);
+}
+
+.series-page .left-content {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.series-page .left-content h2 {
+margin-bottom: 10px;
+font-size: 28px;
+color: #cd8c38;
+}
+
+.series-page .content {
+font-size: 30px;
+color: #cd8c38;
+text-align: center;
+margin-top: 30px;
+}
+
+.series-page .series-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.series-page .series-list li {
+background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));
+backdrop-filter: blur(5px);
+border: 1px solid #cd8c38;
+margin: 15px 0;
+padding: 20px;
+width: 90%;
+max-width: 600px;
+border-radius: 10px;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.series-page .series-list li:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.series-page .series-list li h4 {
+margin: 0;
+font-size: 24px;
+color: #cd8c38;
+font-weight: bold;
+}
+
+.series-page .series-list li p {
+font-size: 18px;
+color: #adadad;
+margin-top: 5px;
+}
+
+.series-page .navigation li a {
+cursor: pointer;
+font-size: 16px;
+color: #cd8c38;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.series-page .navigation li a:hover {
+color: #92601f;
+}
+
+.series-list {
+display: flex; /* Display items in a horizontal row */
+overflow-x: auto; /* Enable horizontal scrolling */
+padding: 10px 0;
+list-style: none; /* Remove default list styling */
+margin: 0;
+}
+
+.series-list li {
+flex: 0 0 auto; /* Prevent items from shrinking or growing */
+width: 200px; /* Set fixed width for each item */
+margin-right: 20px; /* Space between items */
+background-color: #333; /* Background color for each series item */
+color: white;
+padding: 10px;
+border-radius: 5px;
+text-align: center;
+}
+
+.series-list li h4 {
+font-size: 18px;
+margin: 0;
+}
+
+.series-list li p {
+font-size: 14px;
+margin: 5px 0;
+}
+.series-list li p em {
+color: #cd8c38;
+}
+
+/* Searchbar */
+.series-page .search-bar {
+width: 50%;
+padding: 10px;
+margin-bottom: 20px;
+font-size: 16px;
+border: 1px solid #cd8c38;
+border-radius: 5px;
+background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));
+backdrop-filter: blur(5px);
+border: 1px solid #cd8c38;
+color: #adadad;
+}
+
+.series-page .search-bar:focus {
+outline: none;
+border-color: #92601f;
+box-shadow: 0 0 5px rgba(205, 140, 56, 0.5);
+}
+
+/* Styling for Back Button */
+.series-page .back-btn {
+display: inline-block;
+padding: 10px 20px;
+margin-top: 20px;
+background-color: #cd8c38;
+color: white;
+font-size: 16px;
+border-radius: 8px;
+text-decoration: none;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.series-page .back-btn:hover {
+background-color: #92601f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.series-page .left-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+.series-page .series-list li {
+  width: 95%;
+  margin: 10px 0;
+}
+
+.series-page .series-list li h4 {
+  font-size: 22px;
+}
+
+.series-page .series-list li p {
+  font-size: 16px;
+}
+
+.series-page .navigation li a {
+  font-size: 14px;
+}
+
+.series-page .back-btn {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+}
+
+                                      /*The CSS of Drama Timings Page */
+.drama-page {
+position: fixed;
+top: 5%;
+left: 22%;
+width: 56%;
+height: 90%;
+background: rgba(0, 0, 0, 0.7);
+border: 1px solid #cd8c38;
+color: #adadad;
+display: flex;
+flex-direction: column;
+z-index: 1000;
+border-radius: 1rem;
+padding: 2rem 2.5rem;
+overflow-y: auto; /* Enable vertical scrolling */
+scrollbar-width: thin; /* Firefox scrollbar width */
+scrollbar-color: #cd8c38 rgba(0, 0, 0, 0.3); /* Scrollbar color */
+}
+
+/* Scrollbar styling for Webkit browsers (Chrome, Safari, Edge) */
+.drama-page::-webkit-scrollbar {
+width: 8px;
+}
+
+.drama-page::-webkit-scrollbar-thumb {
+background-color: #cd8c38;
+border-radius: 4px;
+}
+
+.drama-page::-webkit-scrollbar-track {
+background: rgba(0, 0, 0, 0.3);
+}
+
+.drama-page .left-content {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.drama-page .left-content h2 {
+margin-bottom: 10px;
+font-size: 28px;
+color: #cd8c38;
+}
+
+.drama-page .content {
+font-size: 30px;
+color: #cd8c38;
+text-align: center;
+margin-top: 30px;
+}
+
+.drama-page .drama-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.drama-page .drama-list li {
+background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));
+backdrop-filter: blur(5px);
+border: 1px solid #cd8c38;
+margin: 15px 0;
+padding: 20px;
+width: 90%;
+max-width: 600px;
+border-radius: 10px;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.drama-page .drama-list li:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.drama-page .drama-list li h4 {
+margin: 0;
+font-size: 24px;
+color: #cd8c38;
+font-weight: bold;
+}
+
+.drama-page .drama-list li p {
+font-size: 18px;
+color: #adadad;
+margin-top: 5px;
+}
+
+.drama-page .navigation li a {
+cursor: pointer;
+font-size: 16px;
+color: #cd8c38;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.drama-page .navigation li a:hover {
+color: #92601f;
+}
+
+.drama-list {
+display: flex; /* Display items in a horizontal row */
+overflow-x: auto; /* Enable horizontal scrolling */
+padding: 10px 0;
+list-style: none; /* Remove default list styling */
+margin: 0;
+}
+
+.drama-list li {
+flex: 0 0 auto; /* Prevent items from shrinking or growing */
+width: 200px; /* Set fixed width for each item */
+margin-right: 20px; /* Space between items */
+background-color: #333; /* Background color for each drama item */
+color: white;
+padding: 10px;
+border-radius: 5px;
+text-align: center;
+}
+
+.drama-list li h4 {
+font-size: 18px;
+margin: 0;
+}
+
+.drama-list li p {
+font-size: 14px;
+margin: 5px 0;
+}
+.drama-list li p em{
+color: #cd8c38;
+}
+
+/* Searchbar */
+.drama-page .search-bar {
+width: 50%;
+padding: 10px;
+margin-bottom: 20px;
+font-size: 16px;
+border: 1px solid #cd8c38;
+border-radius: 5px;
+background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));
+backdrop-filter: blur(5px);
+border: 1px solid #cd8c38;
+color: #adadad;
+}
+
+.drama-page .search-bar:focus {
+outline: none;
+border-color: #92601f;
+box-shadow: 0 0 5px rgba(205, 140, 56, 0.5);
+}
+
+/* Styling for Back Button */
+.drama-page .back-btn {
+display: inline-block;
+padding: 10px 20px;
+margin-top: 20px;
+background-color: #cd8c38;
+color: white;
+font-size: 16px;
+border-radius: 8px;
+text-decoration: none;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.drama-page .back-btn:hover {
+background-color: #92601f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.drama-page .left-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+.drama-page .drama-list li {
+  width: 95%;
+  margin: 10px 0;
+}
+
+.drama-page .drama-list li h4 {
+  font-size: 22px;
+}
+
+.drama-page .drama-list li p {
+  font-size: 16px;
+}
+
+.drama-page .navigation li a {
+  font-size: 14px;
+}
+
+.drama-page .back-btn {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+}
+
+                             /*The CSS of Cartoon Timings Page */
+.cartoon-page {
+position: fixed;
+top: 5%;
+left: 22%;
+width: 56%;
+height: 90%;
+background: rgba(0, 0, 0, 0.7);
+border: 1px solid #cd8c38;
+color: #adadad;
+display: flex;
+flex-direction: column;
+z-index: 1000;
+border-radius: 1rem;
+padding: 2rem 2.5rem;
+overflow-y: auto; /* Enable vertical scrolling */
+scrollbar-width: thin; /* Firefox scrollbar width */
+scrollbar-color: #cd8c38 rgba(0, 0, 0, 0.3); /* Scrollbar color */
+}
+
+/* Scrollbar styling for Webkit browsers (Chrome, Safari, Edge) */
+.cartoon-page::-webkit-scrollbar {
+width: 8px;
+}
+
+.cartoon-page::-webkit-scrollbar-thumb {
+background-color: #cd8c38;
+border-radius: 4px;
+}
+
+.cartoon-page::-webkit-scrollbar-track {
+background: rgba(0, 0, 0, 0.3);
+}
+
+.cartoon-page .left-content {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.cartoon-page .left-content h2 {
+margin-bottom: 10px;
+font-size: 28px;
+color: #cd8c38;
+}
+
+.cartoon-page .content {
+font-size: 30px;
+color: #cd8c38;
+text-align: center;
+margin-top: 30px;
+}
+
+.cartoon-page .cartoon-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.cartoon-page .cartoon-list li {
+background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));
+backdrop-filter: blur(5px);
+border: 1px solid #cd8c38;
+margin: 15px 0;
+padding: 20px;
+width: 90%;
+max-width: 600px;
+border-radius: 10px;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartoon-page .cartoon-list li:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cartoon-page .cartoon-list li h4 {
+margin: 0;
+font-size: 24px;
+color: #cd8c38;
+font-weight: bold;
+}
+
+.cartoon-page .cartoon-list li p {
+font-size: 18px;
+color: #adadad;
+margin-top: 5px;
+}
+
+.cartoon-page .navigation li a {
+cursor: pointer;
+font-size: 16px;
+color: #cd8c38;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.cartoon-page .navigation li a:hover {
+color: #92601f;
+}
+
+.cartoon-list {
+display: flex; /* Display items in a horizontal row */
+overflow-x: auto; /* Enable horizontal scrolling */
+padding: 10px 0;
+list-style: none; /* Remove default list styling */
+margin: 0;
+}
+
+.cartoon-list li {
+flex: 0 0 auto; /* Prevent items from shrinking or growing */
+width: 200px; /* Set fixed width for each item */
+margin-right: 20px; /* Space between items */
+background-color: #333; /* Background color for each cartoon item */
+color: white;
+padding: 10px;
+border-radius: 5px;
+text-align: center;
+}
+
+.cartoon-list li h4 {
+font-size: 18px;
+margin: 0;
+}
+
+.cartoon-list li p {
+font-size: 14px;
+margin: 5px 0;
+}
+.cartoon-list li p em {
+color: #cd8c38;
+}
+
+/* Searchbar */
+.cartoon-page .search-bar {
+width: 50%;
+padding: 10px;
+margin-bottom: 20px;
+font-size: 16px;
+border: 1px solid #cd8c38;
+border-radius: 5px;
+background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));
+backdrop-filter: blur(5px);
+border: 1px solid #cd8c38;
+color: #adadad;
+}
+
+.cartoon-page .search-bar:focus {
+outline: none;
+border-color: #92601f;
+box-shadow: 0 0 5px rgba(205, 140, 56, 0.5);
+}
+
+/* Styling for Back Button */
+.cartoon-page .back-btn {
+display: inline-block;
+padding: 10px 20px;
+margin-top: 20px;
+background-color: #cd8c38;
+color: white;
+font-size: 16px;
+border-radius: 8px;
+text-decoration: none;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.cartoon-page .back-btn:hover {
+background-color: #92601f;
+}
+
+                    /* Responsive Design */
+@media (max-width: 768px) {
+.cartoon-page .left-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+.cartoon-page .cartoon-list li {
+  width: 95%;
+  margin: 10px 0;
+}
+
+.cartoon-page .cartoon-list li h4 {
+  font-size: 22px;
+}
+
+.cartoon-page .cartoon-list li p {
+  font-size: 16px;
+}
+
+.cartoon-page .navigation li a {
+  font-size: 14px;
+}
+
+.cartoon-page .back-btn {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+}
+
+                                       /*Below the CSS of Kids Timings Page */
+.kids-page {
+position: fixed;
+top: 5%;
+left: 22%;
+width: 56%;
+height: 90%;
+background: rgba(0, 0, 0, 0.7);
+border: 1px solid #cd8c38;
+color: #adadad;
+display: flex;
+flex-direction: column;
+z-index: 1000;
+border-radius: 1rem;
+padding: 2rem 2.5rem;
+overflow-y: auto; /* Enable vertical scrolling */
+scrollbar-width: thin; /* Firefox scrollbar width */
+scrollbar-color: #cd8c38 rgba(0, 0, 0, 0.3); /* Scrollbar color */
+}
+
+/* Scrollbar styling for Webkit browsers (Chrome, Safari, Edge) */
+.kids-page::-webkit-scrollbar {
+width: 8px;
+}
+
+.kids-page::-webkit-scrollbar-thumb {
+background-color: #cd8c38;
+border-radius: 4px;
+}
+
+.kids-page::-webkit-scrollbar-track {
+background: rgba(0, 0, 0, 0.3);
+}
+
+.kids-page .left-content {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.kids-page .left-content h2 {
+margin-bottom: 10px;
+font-size: 28px;
+color: #cd8c38;
+}
+
+.kids-page .content {
+font-size: 30px;
+color: #cd8c38;
+text-align: center;
+margin-top: 30px;
+}
+
+.kids-page .kids-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.kids-page .kids-list li {
+background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));
+backdrop-filter: blur(5px);
+border: 1px solid #cd8c38;
+margin: 15px 0;
+padding: 20px;
+width: 90%;
+max-width: 600px;
+border-radius: 10px;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kids-page .kids-list li:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.kids-page .kids-list li h4 {
+margin: 0;
+font-size: 24px;
+color: #cd8c38;
+font-weight: bold;
+}
+
+.kids-page .kids-list li p {
+font-size: 18px;
+color: #adadad;
+margin-top: 5px;
+}
+
+.kids-page .navigation li a {
+cursor: pointer;
+font-size: 16px;
+color: #cd8c38;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.kids-page .navigation li a:hover {
+color: #92601f;
+}
+
+.kids-list {
+display: flex; /* Display items in a horizontal row */
+overflow-x: auto; /* Enable horizontal scrolling */
+padding: 10px 0;
+list-style: none; /* Remove default list styling */
+margin: 0;
+}
+
+.kids-list li {
+flex: 0 0 auto; /* Prevent items from shrinking or growing */
+width: 200px; /* Set fixed width for each item */
+margin-right: 20px; /* Space between items */
+background-color: #333; /* Background color for each kids item */
+color: white;
+padding: 10px;
+border-radius: 5px;
+text-align: center;
+}
+
+.kids-list li h4 {
+font-size: 18px;
+margin: 0;
+}
+
+.kids-list li p {
+font-size: 14px;
+margin: 5px 0;
+}
+.kids-list li p em {
+color: #cd8c38;
+}
+
+/* Searchbar */
+.kids-page .search-bar {
+width: 50%;
+padding: 10px;
+margin-bottom: 20px;
+font-size: 16px;
+border: 1px solid #cd8c38;
+border-radius: 5px;
+background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));
+backdrop-filter: blur(5px);
+border: 1px solid #cd8c38;
+color: #adadad;
+}
+
+.kids-page .search-bar:focus {
+outline: none;
+border-color: #92601f;
+box-shadow: 0 0 5px rgba(205, 140, 56, 0.5);
+}
+
+/* Styling for Back Button */
+.kids-page .back-btn {
+display: inline-block;
+padding: 10px 20px;
+margin-top: 20px;
+background-color: #cd8c38;
+color: white;
+font-size: 16px;
+border-radius: 8px;
+text-decoration: none;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.kids-page .back-btn:hover {
+background-color: #92601f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.kids-page .left-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+.kids-page .kids-list li {
+  width: 95%;
+  margin: 10px 0;
+}
+
+.kids-page .kids-list li h4 {
+  font-size: 22px;
+}
+
+.kids-page .kids-list li p {
+  font-size: 16px;
+}
+
+.kids-page .navigation li a {
+  font-size: 14px;
+}
+
+.kids-page .back-btn {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+}
+
+                                    /* Buy Ticket*/
+.buy-ticket-button {
+background-color: #cd8c38;
+color: white;
+font-size: 16px;
+padding: 10px 15px;
+margin-top: 10px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-ticket-button:hover {
+background-color: #92601f;
+transform: scale(1.05);
+}
+
+
+                                           /*The CSS of main container */
+.main-container {
+    color: #adadad;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+}
+
+                                       /*Below the CSS of Tv show Details Dropdown */
+  .tvshow-content {
+    position: fixed;
+    top: 8.5%;
+    left: 44%;
+    width: 6.5%;
+    height: fit-content;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #cd8c38;
+    color: #adadad;
+    display: flex;
+    z-index: 1000;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+  }
+  .tvshow-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tvshow-content ul li {
+    padding: 10px;
+    cursor: pointer;
+    color: #adadad;
+  }
+  
+  .tvshow-content ul li:hover {
+    background-color: #cd8c38; /* Hover effect */
+  }
+
+/* Below the CSS of notification icon*/
+.notification-modal {
+    position: fixed;
+    top: 5%;
+    left: 22%;
+    width: 56%;
+    height: 90%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #cd8c38;
+    color: #adadad;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.notification-content {
+  background:linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));;
+  backdrop-filter: blur(5px);
+  border: 1px solid #cd8c38;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 80%;
+}
+
+.notification-content h2 {
+  color: #cd8c38;
+  margin-bottom: 15px;
+}
+
+.notification-content p{
+  color: #adadad;
+}
+
+.notification-content button {
+  padding: 10px 20px;
+  background: #cd8c38;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.notification-content button:hover {
+  background: #92601f;
+}
+                                      /*Below the CSS of Event */
+.event-modal {
+    position: fixed;
+      top: 5%;
+      left: 22%;
+      width: 56%;
+      height: 90%;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid #cd8c38;
+      color: #adadad;
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+      border-radius: 1rem;
+      padding: 2rem 2.5rem;
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  }
+  
+  .event-content {
+    background:linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));;
+    backdrop-filter: blur(5px);
+    border: 1px solid #cd8c38;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 80%;
+  }
+  
+  .event-content h2 {
+    color: #cd8c38;
+    margin-bottom: 15px;
+  }
+   .event-content ul li{
+    color: #cd8c38;
+    font-size: 20px;
+   }
+  .event-content p{
+    color: #adadad;
+  }
+  
+  .event-content button {
+    padding: 10px 20px;
+    background: #cd8c38;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .event-content button:hover {
+    background: #92601f;
+  }
+                                         /*Below the CSS of Help Icon */
+.help-message {
+    position: fixed;
+    top: 5%;
+    left: 22%;
+    width: 56%;
+    height: 90%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #cd8c38;
+    color: #adadad;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.help-content {
+  background:linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(205, 140, 56, 0.15));;
+  backdrop-filter: blur(5px);
+  border: 1px solid #cd8c38;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 80%;
+}
+.help-message h2 {
+  color: #cd8c38;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.help-message p {
+  color: #adadad;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+ .help-message a{
+  color: #cd8c38;
+ }
+ .help-message a:hover{
+  color: #92601f;
+ }
+.help-message button {
+  background-color: #cd8c38;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.help-message button:hover {
+  background-color: #92601f;
+}
+
+                                  /*Below the menu Details Dropdown */
+
+.menu-content {
+  position: fixed;
+  top: 8.5%;
+  left: 70%;
+  width: 6.5%;
+  height: fit-content;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #cd8c38;
+  color: #adadad;
+  display: flex;
+  z-index: 1000;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+}
+.menu-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-content ul li {
+  padding: 10px;
+  cursor: pointer;
+  color: #adadad;
+}
+
+.menu-content ul li:hover {
+  background-color: #cd8c38; /* Hover effect */
+}
+
+                                   /*Below The CSS of Profile Details Dropdown */
+.profile-dropdown {
+  position: fixed;
+  top: 8.5%;
+  left: 66.5%;
+  width: 10%;
+  height: fit-content;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #cd8c38;
+  color: #adadad;
+  display: flex;
+  z-index: 1000;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+}
+
+.profile-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-dropdown ul li {
+  padding: 10px;
+  cursor: pointer;
+  color: #adadad;
+}
+
+.profile-dropdown ul li:hover {
+  background-color: #cd8c38; /* Hover effect */
+}
+.profile-dropdown ul li:hover{
+  color: #fff;
+}
+.profile-dropdown .logout:hover{
+ color: #fff;
+}
+.profile-dropdown .logout {
+  color: #cd8c38; /* Make the logout option stand out */
+}
+
+                                      /*Below the CSS of movies container */
+
+.upcoming-img-box {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.upcoming-title {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: #cd8c38;
+    background-color: #1e1f26;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid #cd8c38;
+    font-weight: 500;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.btn-alt {
+    background-color: #1e1f26;
+    color: #cd8c38;
+    border: 1px solid #cd8c38;
+    margin-left: 1rem;
+}
+
+.btn-alt:hover {
+    color: #1e1f26;
+    background-color: #cd8c38;
+}
+
+
+                                     /*Below the CSS of current movies */
+
+.movies-container {
+    padding-bottom: 2rem;
+}
+
+.current-movies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.current-movie {
+    background: linear-gradient(45deg, rgba(255, 255, 255, .05), rgba(205, 140, 56, .15));
+    border: 1px solid #cd8c38;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.cm-img-box {
+    position: relative;
+    height: 150px;
+    width: auto;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.movie-title {
+    color: white;
+    margin-bottom: .2rem;
+}
+
+.booking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.price {
+    color: #cd8c38;
+}
+
+
+                                  /* Below The Style/CSS of sidebar */
+.sidebar {
+    background: linear-gradient(45deg, rgba(255, 255, 255, .05), rgba(205, 140, 56, .15));
+    backdrop-filter: blur(5px);
+    border: 1px solid #cd8c38;
+    height: fit-content;
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+}
+
+.sidebar-groups {
+    margin-bottom: 1rem;
+}
+
+.sg-title {
+    margin-bottom: .5rem;
+    color: #cd8c38;
+}
+
+input {
+    margin-bottom: .6rem;
+}
+
+input[type=checkbox]:checked {
+    accent-color: #cd8c38;
+}
+
+input[type=radio]:checked {
+    accent-color: #cd8c38;
+}
+
+label {
+    margin-left: .5rem;
+}
+                                      /*Below the CSS of Footer Section */
+.footer {
+    background: linear-gradient(45deg, rgba(255, 255, 255, .05), rgba(205, 140, 56, .15));
+  color: #cd8c38;
+  border: 1px solid #cd8c38;
+  padding: 20px;
+  text-align: center;
+  border-radius: 1rem;
+padding: 2rem 2.5rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.footer-section {
+  flex: 1 1 30%;
+  padding: 10px;
+  max-width: 300px;
+}
+ 
+.footer p{
+    color: #adadad;
+}
+.footer-section h4 {
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #adadad;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  color: #cd8c38;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  color: #adadad;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+ color: #cd8c38;
+}
+
+.footer-bottom {
+  margin-top: 15px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+ .footer-bottom p{
+    color: #adadad;
+ }
+
+                                  /*The CSS of Offers Section Styles */
+
+.offers-section{
+position: fixed;
+top: 5%;
+left: 22%;
+width: 56%;
+height: 60%;
+background: rgba(0, 0, 0, 0.7);
+border: 1px solid #cd8c38;
+color: #adadad;
+display: flex;
+flex-direction: column;
+z-index: 1000;
+border-radius: 1rem;
+padding: 2rem 2.5rem;
+}
+.offers-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color:#cd8c38;
+}
+
+.offers-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.offers-section ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #adadad;
+}
+
+.offers-section ul li:last-child {
+  border-bottom: none;
+}
+
+.offers-section h3 {
+  font-size: 18px;
+  color: #cd8c38;
+  margin-bottom: 5px;
+}
+
+.offers-section p {
+  font-size: 14px;
+  color: #adadad;
+  margin: 0;
+}
+
+.offers-section button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #cd8c38;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.offers-section button:hover {
+  background-color: #92601f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .offers-section {
+    width: 90%;
+  }
+}
+
+                                /*The CSS of Review Section Styles */
+.reviews-section{
+position: fixed;
+top: 5%;
+left: 22%;
+width: 56%;
+height: 90%;
+background: rgba(0, 0, 0, 0.7);
+border: 1px solid #cd8c38;
+color: #adadad;
+display: flex;
+flex-direction: column;
+z-index: 1000;
+border-radius: 1rem;
+padding: 2rem 2.5rem;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #ccc;
+}
+.reviews-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #cd8c38;
+}
+
+.reviews-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reviews-section ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #adadad;
+}
+
+.reviews-section ul li:last-child {
+  border-bottom: none;
+}
+
+.reviews-section h3 {
+  font-size: 18px;
+  color: #cd8c38;
+  margin-bottom: 5px;
+}
+
+.reviews-section p {
+  font-size: 14px;
+  color: #adadad;
+  margin: 0;
+}
+
+.reviews-section button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #cd8c38;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.reviews-section button:hover {
+  background-color: #92601f;
+}
+
+                            /*THE CSS of Add Review Form */
+ .add-review-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+}
+
+.add-review-form h3 {
+  font-size: 22px;
+  color: #cd8c38;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.add-review-form input,
+.add-review-form textarea {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  resize: none;
+}
+
+.add-review-form textarea {
+  min-height: 100px;
+}
+
+.add-review-form button {
+  background-color: #cd8c38;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-review-form button:hover {
+  background-color: #92601f;
+  transform: scale(1.05);
+}
+
+.add-review-form button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(205, 140, 56, 0.8);
+}
+
+                              /*The CSS of Branches Section */
+.branches-section{
+position: fixed;
+top: 5%;
+left: 22%;
+width: 56%;
+height: 90%;
+background: rgba(0, 0, 0, 0.7);
+border: 1px solid #cd8c38;
+color: #adadad;
+display: flex;
+flex-direction: column;
+z-index: 1000;
+border-radius: 1rem;
+padding: 2rem 2.5rem;
+}
+
+.branches-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #cd8c38;
+}
+
+.branches-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.branches-section ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #adadad;
+}
+
+.branches-section ul li:last-child {
+  border-bottom: none;
+}
+
+.branches-section h3 {
+  font-size: 18px;
+  color: #cd8c38;
+  margin-bottom: 5px;
+}
+
+.branches-section p {
+  font-size: 14px;
+  color: #adadad;
+  margin: 0;
+}
+
+.branches-section button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #cd8c38;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.branches-section button:hover {
+  background-color: #92601f;
+}
+
