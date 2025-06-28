@@ -1,3 +1,6 @@
+Developed a responsive cinema website with features like movie cards, ticket booking, user profile, and upcoming shows/movies.
+Implemented interactive components including sidebar menu, categories, language/time selector, and integrated social media links.
+Created structured pages: Home, Tickets, TV Show, Offers, Help, Reviews, About us, optimized for user experience
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
